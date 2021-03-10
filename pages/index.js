@@ -13,9 +13,13 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Zurich based Software Engineer ⌨️</p>
+        <p>
+          Zurich based Software Engineer 👨🏽‍💻 currently enrolled at university.
+          Looking for a part time job.
+        </p>
         <ul>
-          <li>scout 🏕️</li>
+          <li>computing machinery and how it works ⚙️</li>
+          <li>outdoors 🏕️</li>
           <li>making &amp; lasercutting 🛠️</li>
         </ul>
       </section>
