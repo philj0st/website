@@ -7,12 +7,19 @@
     "build": "next build",
     "start": "next start"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
     "cross-env": "^7.0.3",
     "next": "^10.0.0",
     "next-mdx-remote": "^3.0.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-images": "^1.2.0-beta.7",
+    "react-photo-gallery": "^8.0.0"
   },
   "devDependencies": {
     "gray-matter": "^4.0.2",
