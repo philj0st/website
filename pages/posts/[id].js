@@ -1,13 +1,18 @@
-import Layout from "../../components/layout";
 import Head from "next/head";
+import Image from "next/image";
+
+import Layout from "../../components/layout";
 import Date from "../../components/date";
+
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote } from "next-mdx-remote";
 
 import utilStyles from "../../styles/utils.module.css";
 
+const components = { Image };
+
 export default function Post({ postData }) {
-  let {source, frontMatter} = postData
+  let { source, frontMatter } = postData;
   return (
     <Layout>
       <Head>
@@ -19,7 +24,7 @@ export default function Post({ postData }) {
           <Date dateString={frontMatter.date} />
         </div>
         <main>
-          <MDXRemote {...source}/>
+          <MDXRemote {...source} components={components} />
         </main>
       </article>
     </Layout>
