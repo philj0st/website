@@ -2,21 +2,25 @@ import Layout from "../../components/layout";
 import Head from "next/head";
 import Date from "../../components/date";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import { MDXRemote } from 'next-mdx-remote'
 
 import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ postData }) {
+  let {source, frontMatter} = postData
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{frontMatter.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{frontMatter.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={frontMatter.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <main>
+          <MDXRemote {...source}/>
+        </main>
       </article>
     </Layout>
   );
