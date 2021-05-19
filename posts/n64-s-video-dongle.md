@@ -3,7 +3,7 @@ title: "N64 S-Video over SCART Dongle"
 date: "2020-11-12"
 ---
 
-In the [previous post](./n64-s-video-cable) we modified a cheap AV cable. Soon after though I came across a top quality gold plated SCART plug-plug cable and some mini SCART dongles. They undoubtedly have better shielding than the cheap Ali Express cable.
+In the <Link href="./n64-s-video-cable"><a>previous post</a></Link> we modified a cheap AV cable. Soon after though I came across a top quality gold plated SCART plug-plug cable and some mini SCART dongles. They undoubtedly have better shielding than the cheap Ali Express cable.
 
 I also had a Nintendo SNES/GC AV connector lying around. These are all the components needed to make a S-Video dongle and connect it to my CRT.
 

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/Link";
 
 import Layout from "../../components/layout";
 import Date from "../../components/date";
@@ -9,7 +10,7 @@ import { MDXRemote } from "next-mdx-remote";
 
 import utilStyles from "../../styles/utils.module.css";
 
-const components = { Image };
+const components = { Image, Link };
 
 export default function Post({ postData }) {
   let { source, frontMatter } = postData;
