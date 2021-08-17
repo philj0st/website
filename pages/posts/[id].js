@@ -6,11 +6,12 @@ import Layout from "../../components/layout";
 import Date from "../../components/date";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getPostImages } from "../../lib/images";
 import { MDXRemote } from "next-mdx-remote";
 
 import utilStyles from "../../styles/utils.module.css";
-
-const components = { Image, Link };
+import LightBoxGallery from "../../components/lightBoxGallery";
+const components = { Image, Link, LightBoxGallery };
 
 export default function Post({ postData }) {
   let { source, frontMatter } = postData;
@@ -40,8 +41,10 @@ export async function getStaticPaths() {
   };
 }
 
+// if we statically preprocess images to be shown in a post do it here
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
+  // const postImages = await getPostImages(params);
   return {
     props: {
       postData,
